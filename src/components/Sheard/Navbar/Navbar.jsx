@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import "animate.css";
+import Image from "next/image";
+import logo from '@/assets/logo1.png'
+
 const Navbar = () => {
     const [open, setOpen] = useState(false);
 
@@ -25,14 +28,14 @@ const Navbar = () => {
             ABOUT US
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             className="relative after:bg-[#03A84E] after:absolute after:h-[2px] after:w-0 after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
             href={"/services"}
           >
             SERVICES
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link
             className=" relative after:bg-[#03A84E] after:absolute after:h-[2px] after:w-0 after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
@@ -67,14 +70,18 @@ const Navbar = () => {
 
     return (
       <section className="font-poppins">
-        <div className="max-w-6xl px-4 mx-auto" x-data="{open:false}">
-          <nav className="flex items-center justify-between py-3">
-            <a
-              href=""
-              className="text-3xl font-semibold leading-none text-gray-200 dark:text-gray-300 animate__animated animate__fadeInLeft"
-            >
-              Logo
-            </a>
+        <div className="" x-data="{open:false}">
+          <nav className="flex  items-center justify-between py-4">
+            <div className="">
+              <Image
+                height={50}
+                width={60}
+                className=" cursor-pointer"
+                src={logo}
+                alt=""
+              ></Image>
+              <h3 className="text-[#7C7E81] font-semibold text-center">MERN</h3>
+            </div>
             <div className="lg:hidden">
               <button
                 className="flex items-center px-3 py-2 text-blue-200 border border-blue-200 rounded dark:text-gray-400 hover:text-blue-300 hover:border-blue-300 lg:hidden"
@@ -95,7 +102,7 @@ const Navbar = () => {
                 </svg>
               </button>
             </div>
-            <ul className="hidden text-gray-300/80 font-medium text-sm  lg:w-auto lg:space-x-12 lg:items-end lg:flex animate__animated animate__fadeInRight ">
+            <ul className="hidden text-gray-300/80 font-semibold text-sm  lg:w-auto lg:space-x-12 lg:items-end lg:flex animate__animated animate__fadeInRight ">
               {menuLinks}
             </ul>
           </nav>
