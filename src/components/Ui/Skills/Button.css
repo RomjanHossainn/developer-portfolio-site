@@ -1,0 +1,91 @@
+.myButton {
+  position: relative;
+  padding: 12px 36px;
+  margin: 10px 0;
+  color: white;
+  font-size: 17px;
+  letter-spacing: 2px;
+  border: 2px solid #262626;
+  border-radius: 5px;
+  /* background: linear-gradient(90deg, #03a84da7, #03a84d77); */
+  cursor: pointer;
+  display: inline-block;
+}
+
+.myButton:hover {
+  color: white;
+}
+
+.myButton span {
+  display: block;
+  position: absolute;
+  background: #03A84E;
+}
+
+.myButton span:nth-child(1) {
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.25s;
+}
+
+.myButton:hover span:nth-child(1) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.25s;
+}
+
+.myButton span:nth-child(2) {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s;
+}
+
+.myButton:hover span:nth-child(2) {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.25s;
+}
+
+.myButton span:nth-child(3) {
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.25s;
+  transition-delay: 0.25s;
+}
+
+.myButton:hover span:nth-child(3) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.25s;
+  transition-delay: 0.25s;
+}
+
+.myButton span:nth-child(4) {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s;
+  transition-delay: 0.25s;
+}
+
+.myButton:hover span:nth-child(4) {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.25s;
+  transition-delay: 0.25s;
+}

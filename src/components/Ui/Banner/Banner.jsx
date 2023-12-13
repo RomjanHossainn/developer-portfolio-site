@@ -7,6 +7,7 @@ import bannerimg from "@/assets/bannerimg.gif";
 import './Banner.css';
 import { GoDownload } from "react-icons/go";
 import TextTransition, { presets } from "react-text-transition";
+
 const TEXTS = [
   "Creative Web Developer",
   "Front-End Developer",
@@ -29,14 +30,15 @@ const Banner = () => {
 
 
     return (
-      <div className="py-20">
+      <div className="py-20 ">
+        
         <div className=" font-poppins">
           <div className="flex flex-wrap justify-between items-center">
             <div className="w-full px-4 mb-16 md:w-1/2 md:mb-0">
-              <span className="inline-block mb-4 text-sm font-semibold leading-none text-red-500 capitalize dark:text-red-200">
+              <span className="inline-block mb-4 text-sm font-semibold leading-none text-[#FECACA] capitalize">
                 HI THERE , MY NAME IS
               </span>
-              <h2 className="mb-2 text-3xl font-semibold leading-tight tracking-tight text-gray-900 dark:text-gray-300 md:text-5xl lg:text-6xl">
+              <h2 className="mb-2 text-3xl font-semibold leading-tight tracking-tight text-gray-300  md:text-5xl lg:text-6xl">
                 Romjan Hossain
               </h2>
 
@@ -46,7 +48,7 @@ const Banner = () => {
                 </TextTransition>
               </h1>
 
-              <p className="mb-6 font-medium tracking-wide text-gray-600 dark:text-gray-400 md:text-lg">
+              <p className="mb-6 font-medium tracking-wide text-gray-400  md:text-lg">
                 As a front-end developer, I bring websites to life with clean
                 code, responsive design, and a keen eye for detail. create
                 user-friendly interfaces.

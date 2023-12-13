@@ -5,7 +5,7 @@ import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import "animate.css";
 import Image from "next/image";
-import logo from '@/assets/logo1.png'
+import logo from "@/assets/coderpng.png";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -52,12 +52,13 @@ const Navbar = () => {
             BLOGS
           </Link>
         </li>
+        
         <li>
           <Link
             className=" relative after:bg-[#03A84E] after:absolute after:h-[2px] after:w-0 after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
             href={"/contact"}
           >
-            CONTACT US
+            MY DEVELOPER STORY
           </Link>
         </li>
         <li>
@@ -68,19 +69,22 @@ const Navbar = () => {
       </>
     );
 
+    
+
+
     return (
       <section className="font-poppins">
         <div className="" x-data="{open:false}">
-          <nav className="flex  items-center justify-between py-4">
+          <nav className="flex items-center justify-between py-4">
             <div className="">
               <Image
-                height={50}
-                width={60}
+                height={160}
+                width={170}
                 className=" cursor-pointer"
                 src={logo}
                 alt=""
               ></Image>
-              <h3 className="text-[#7C7E81] font-semibold text-center">MERN</h3>
+              
             </div>
             <div className="lg:hidden">
               <button
@@ -102,7 +106,7 @@ const Navbar = () => {
                 </svg>
               </button>
             </div>
-            <ul className="hidden text-gray-300/80 font-semibold text-sm  lg:w-auto lg:space-x-12 lg:items-end lg:flex animate__animated animate__fadeInRight ">
+            <ul className="hidden text-gray-300/80 font-medium text-sm  lg:w-auto lg:space-x-11 lg:items-end lg:flex animate__animated animate__fadeInRight">
               {menuLinks}
             </ul>
           </nav>

@@ -15,7 +15,7 @@ const Service = () => {
   return (
     <section className="py-10">
       <div className="text-center py-8">
-        <span className="text-gray-200 text-2xl">Services</span>
+        <span className="text-gray-200 text-2xl"> Our Services</span>
         <LinearProgress
           className="w-[120px] rounded-sm mt-1 mx-auto"
           color="success"
