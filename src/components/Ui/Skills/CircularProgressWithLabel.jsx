@@ -32,7 +32,7 @@ const CircularProgressWithLabel = (props) => {
             className="text-white"
             variant="caption"
             component="div"
-            color="text.secondary"
+            color="white"
           >
             {`${Math.round(props.value)}%`}
           </Typography>

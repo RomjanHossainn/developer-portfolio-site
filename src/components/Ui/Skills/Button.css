@@ -89,3 +89,7 @@
   transition: transform 0.25s;
   transition-delay: 0.25s;
 }
+
+.MuiTypography-caption{
+  color: white;
+}

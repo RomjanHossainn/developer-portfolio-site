@@ -3,7 +3,13 @@ import { LinearProgress } from "@mui/material";
 import './Button.css';
 import { useEffect, useRef, useState } from "react";
 import LangugeSkill from "./LangugeSkill";
+import useanimatedHooks from "@/components/hook/useanimatedHooks";
+import { RiJavascriptFill } from "react-icons/ri";
 const Skils = () => {
+
+   useEffect(() => {
+     useanimatedHooks();
+   }, []);
 
     const [progress, setProgress] =useState(0);
     const [buffer, setBuffer] = useState(10);
@@ -38,7 +44,7 @@ const Skils = () => {
     return (
       <section className="text-gray-600 body-font">
         <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center ">
-          <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left space-y-4 mb-16 md:mb-0 items-center text-center">
+          <div className="lg:flex-grow md:w-1/2 animate__fadeInUp animate__animated wow lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left space-y-4 mb-16 md:mb-0 items-center text-center">
             <span className="font-semibold text-sm text-[#FECACA] uppercase">
               expertise
             </span>
@@ -56,10 +62,10 @@ const Skils = () => {
               I have expertise in making static websites, landing pages,
               full-stack web apps, and deployment. My expertise includes
               JavaScript, ReactJs, NextJs, NodeJS, bootstrap, Tailwind
-              css,Material Ui, Express js, MongoDB, JWT & Firebase. I specialize in
-              providing high-quality services in frontend & backend development,
-              Mern-stack projects, React js & next js applications, landing
-              pages, and NFT websites.
+              css,Material Ui, Express js, MongoDB, JWT & Firebase. I specialize
+              in providing high-quality services in frontend & backend
+              development, Mern-stack projects, React js & next js applications,
+              landing pages, and NFT websites.
             </p>
             <div className="flex justify-center">
               <div className="myButton">
@@ -71,7 +77,7 @@ const Skils = () => {
               </div>
             </div>
           </div>
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 space-y-3">
+          <div className="lg:max-w-lg wow animate__fadeInUp animate__animated lg:w-full md:w-1/2 w-5/6 space-y-3">
             <div>
               <p className="text-lg text-gray-200">Git & Github</p>
               <LinearProgress
@@ -139,12 +145,13 @@ const Skils = () => {
                 valueBuffer={buffer}
               />
             </div>
-            <div className="flex items-center justify-center py-5 gap-6">
-              <div>
-                <LangugeSkill color="red"></LangugeSkill>
-                <h5 className="text-md text-gray-200">JavaScript</h5>
+            <div className="grid grid-cols-3 lg:grid-cols-5 items-center justify-center py-5 gap-3 ">
+              <div className="text-center">
+                
+                  <LangugeSkill color="red"></LangugeSkill>
+                  <h5 className="text-md text-gray-200">JavaScript</h5>
+                
               </div>
-
               <div>
                 <LangugeSkill color="red"></LangugeSkill>
                 <h5 className="text-md text-gray-200">React Js</h5>

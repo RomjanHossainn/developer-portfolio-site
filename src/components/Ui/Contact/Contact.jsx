@@ -1,13 +1,16 @@
 "use client"
-
-import ParticalesBackground from "@/components/Particalse/ParticalesBackground";
+import useanimatedHooks from "@/components/hook/useanimatedHooks";
+import { useEffect } from "react";
 
 const Contact = () => {
+   useEffect(() => {
+     useanimatedHooks();
+   }, []);
     return (
-      <section className="">
+      <section className="overflow-hidden" id="contact">
         <div className="container px-6 py-12 mx-auto">
           <div className="lg:flex lg:items-center">
-            <div className="lg:w-1/2">
+            <div className="lg:w-1/2 animate__fadeInUp  animate__animated wow">
               <h1 className="text-2xl font-semibold text-gray-300 capitalize  lg:text-3xl">
                 Contact us for <br /> more info
               </h1>
@@ -119,7 +122,7 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="mt-8 lg:w-1/2 lg:mx-6">
+            <div className="mt-8 lg:w-1/2 lg:mx-6 animate__fadeInRight  animate__animated wow">
               <div className="w-full px-8 py-10 mx-auto overflow-hidden  rounded-lg shadow-2xl lg:max-w-xl  ">
                 <h1 className="text-lg font-medium text-gray-400">
                   What do you want to ask

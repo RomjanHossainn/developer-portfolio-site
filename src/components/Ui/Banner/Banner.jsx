@@ -7,6 +7,7 @@ import bannerimg from "@/assets/bannerimg.gif";
 import './Banner.css';
 import { GoDownload } from "react-icons/go";
 import TextTransition, { presets } from "react-text-transition";
+import useanimatedHooks from '@/components/hook/useanimatedHooks';
 
 const TEXTS = [
   "Creative Web Developer",
@@ -15,9 +16,25 @@ const TEXTS = [
   "User Friendly Website Desgin And Development",
 ];
 
+const PDF_FILE_URL = "http://localhost:3000/file_pdf.pdf";
+
 const Banner = () => {
 
      const [index, setIndex] = useState(0);
+
+    const downloadPhoto = (url) => {
+      const fileName = url.split('/').pop()
+      const atag = document.createElement('a')
+      atag.href = url
+      atag.setAttribute('download',fileName)
+      document.body.appendChild(atag)
+      atag.click()
+      atag.remove()
+    }
+     
+      useEffect(() => {
+        useanimatedHooks();
+      }, []);
 
      useEffect(() => {
        const intervalId = setInterval(
@@ -29,12 +46,14 @@ const Banner = () => {
 
 
 
+    
+
+
     return (
-      <div className="py-20 ">
-        
+      <div className="py-20 overflow-hidden  ">
         <div className=" font-poppins">
           <div className="flex flex-wrap justify-between items-center">
-            <div className="w-full px-4 mb-16 md:w-1/2 md:mb-0">
+            <div className="w-full px-4 mb-16 md:w-1/2 md:mb-0 animate__fadeInUp animate__animated wow">
               <span className="inline-block mb-4 text-sm font-semibold leading-none text-[#FECACA] capitalize">
                 HI THERE , MY NAME IS
               </span>
@@ -53,15 +72,17 @@ const Banner = () => {
                 code, responsive design, and a keen eye for detail. create
                 user-friendly interfaces.
               </p>
-              <a
-                href="#"
+              <a 
+                href="public/file_pdf.pdf"
+                download
+                onClick={() => downloadPhoto(PDF_FILE_URL)}
                 className="inline-flex items-center justify-center px-8 py-3 text-gray-100 bg-[#03a84d80] rounded-md shadow  hover:bg-[#03a84dc7] transition-all"
               >
                 Download CV
                 <GoDownload className="ms-2 text-lg" />
               </a>
             </div>
-            <div className="w-full px-4 md:w-[46%] lg:w-[]">
+            <div className="w-full px-4 md:w-[46%] animate__fadeInRight animate__animated wow">
               <div className="relative mx-auto md:mr-0 max-w-max">
                 <div className="relative box overflow-hidden rounded-7xl">
                   <Image

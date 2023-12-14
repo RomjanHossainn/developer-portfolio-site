@@ -1,14 +1,19 @@
 "use client"
+import { useEffect } from 'react';
 import './Education.css'
+import useanimatedHooks from '@/components/hook/useanimatedHooks';
 const EduCation = () => {
+  useEffect(() => {
+    useanimatedHooks();
+  }, []);
     return (
-      <section className="lg:flex gap-8">
+      <section className="lg:flex gap-8" id="EXPERIENCE">
         <div className="flex-1 ">
           <div className="">
             <h2 className=" mb-3 font-semibold text-[#FECACA] ">EDUCATION</h2>
-            <div className="">
-              <div className="w-full card h-[250px] mb-6 border border-[#373737] rounded-md">
-                <div className="rounded-b  p-6 shadow">
+            <div className="animate__fadeInUp wow  animate__animated">
+              <div className="w-full card h-[250px]  mb-6 border border-[#373737] rounded-md">
+                <div className="rounded-b  p-6 shadow ">
                   <a
                     href="#"
                     className="px-4 py-1 text-sm text-white rounded-full   bg-[#03a84d41]"
@@ -27,7 +32,7 @@ const EduCation = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className="animate__fadeInUp animate__animated wow">
             <div className="w-full card1 h-[250px] border border-[#373737] rounded-md mb-6 lg:px-2">
               <div className="p-6 rounded-b shadow ">
                 <a
@@ -47,7 +52,7 @@ const EduCation = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className="animate__fadeInUp  animate__animated wow">
             <div className="w-full h-[250px] card border border-[#373737] rounded-md  mb-6 lg:px-2">
               <div className="p-6  rounded-b shadow ">
                 <a
@@ -71,7 +76,7 @@ const EduCation = () => {
         <div className="flex-1 ">
           <div>
             <h2 className="font-semibold mb-3 text-[#FECACA]">EXPERIENCE</h2>
-            <div className="w-full card1  h-[250px] border border-[#373737] rounded-md mb-6 lg:px-2">
+            <div className="w-full card1 animate__fadeInUp wow  animate__animated  h-[250px] border border-[#373737] rounded-md mb-6 lg:px-2">
               <div className="p-6  rounded-b shadow ">
                 <a
                   href="#"
@@ -89,24 +94,26 @@ const EduCation = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full card h-[250px] border border-[#373737] rounded-md mb-6 lg:px-2">
-              <div className="p-6  rounded-b shadow ">
-                <a
-                  href="#"
-                  className="px-4 py-1 text-sm rounded-full bg-[#03a84d41] text-white"
-                >
-                  experience
-                </a>
-                <h2 className="my-3 text-2xl font-bold dark:text-gray-300">
-                  Fully Responsive Designer
-                </h2>
-                <p className="mb-3 leading-loose text-gray-500 dark:text-gray-400">
-                  Ensuring mobile compatibility, creating adaptive designs to
-                  provide a consistent and enjoyable experience across devices
-                </p>
+            <div className="animate__fadeInUp wow  animate__animated">
+              <div className="w-full card animate__fadeInUp  animate__animated h-[250px] border border-[#373737] rounded-md mb-6 lg:px-2">
+                <div className="p-6  rounded-b shadow ">
+                  <a
+                    href="#"
+                    className="px-4 py-1 text-sm rounded-full bg-[#03a84d41] text-white"
+                  >
+                    experience
+                  </a>
+                  <h2 className="my-3 text-2xl font-bold dark:text-gray-300">
+                    Fully Responsive Designer
+                  </h2>
+                  <p className="mb-3 leading-loose text-gray-500 dark:text-gray-400">
+                    Ensuring mobile compatibility, creating adaptive designs to
+                    provide a consistent and enjoyable experience across devices
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="w-full h-[250px] border border-[#373737] rounded-md mb-6 lg:px-2">
+            <div className="w-full animate__fadeInUp wow  animate__animated h-[250px] border border-[#373737] rounded-md mb-6 lg:px-2">
               <div className="p-6  rounded-b shadow ">
                 <a
                   href="#"

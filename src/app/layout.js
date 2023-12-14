@@ -16,7 +16,8 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} max-w-screen-xl mx-auto px-5`}>
         <Navbar></Navbar>
         {children}
-        </body>
+        
+      </body>
     </html>
   );
 }

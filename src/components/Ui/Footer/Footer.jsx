@@ -1,8 +1,14 @@
-import React from 'react';
+
+"use client"
+import useanimatedHooks from '@/components/hook/useanimatedHooks';
+import React, { useEffect } from 'react';
 import { BsEmojiSmileUpsideDown } from "react-icons/bs";
 const Footer = () => {
+  useEffect(() => {
+    useanimatedHooks();
+  }, []);
     return (
-      <footer className="footer text-white space-y-8 footer-center p-10 bg-base-200 text-base-content rounded">
+      <footer className="footer text-white space-y-8  animate__fadeInUp wow  animate__animated footer-center p-10 bg-base-200 text-base-content rounded">
         <nav className="flex justify-center gap-5 text-[#AAADB2]">
           <a className="link link-hover cursor-pointer hover:text-[#0e8026] transition-all">
             About us

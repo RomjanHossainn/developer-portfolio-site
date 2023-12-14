@@ -11,9 +11,14 @@ import { MdAddShoppingCart } from "react-icons/md";
 import { FaMobileScreen } from "react-icons/fa6";
 import { GrVmMaintenance } from "react-icons/gr";
 import { LinearProgress } from "@mui/material";
+import { useEffect } from "react";
+import useanimatedHooks from "@/components/hook/useanimatedHooks";
 const Service = () => {
+  useEffect(() => {
+    useanimatedHooks()
+  }, []);
   return (
-    <section className="py-10">
+    <section className="py-10 animate__fadeInUp animate__animated wow">
       <div className="text-center py-8">
         <span className="text-gray-200 text-2xl"> Our Services</span>
         <LinearProgress

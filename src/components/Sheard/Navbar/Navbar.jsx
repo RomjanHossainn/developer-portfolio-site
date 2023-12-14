@@ -14,7 +14,7 @@ const Navbar = () => {
       <>
         <li>
           <Link
-            className=" relative after:bg-[#03A84E] after:absolute after:h-[2px] after:w-0 after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
+            className=" hover:text-[#03A84E]  relative after:bg-[#03A84E] after:absolute after:h-[2px] after:w-0 after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
             href={"/"}
           >
             HOME
@@ -22,7 +22,7 @@ const Navbar = () => {
         </li>
         <li>
           <Link
-            className="relative after:bg-[#03A84E] after:absolute after:h-[2px] after:w-0 after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
+            className="relative hover:text-[#03A84E]  after:bg-[#03A84E] after:absolute after:h-[2px] after:w-0 after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
             href={"/about"}
           >
             ABOUT US
@@ -38,7 +38,7 @@ const Navbar = () => {
         </li> */}
         <li>
           <Link
-            className=" relative after:bg-[#03A84E] after:absolute after:h-[2px] after:w-0 after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
+            className=" relative hover:text-[#03A84E]  after:bg-[#03A84E] after:absolute after:h-[2px] after:w-0 after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
             href={"/project"}
           >
             PROJECTS
@@ -46,19 +46,27 @@ const Navbar = () => {
         </li>
         <li>
           <Link
-            className=" relative after:bg-[#03A84E] after:absolute after:h-[2px] after:w-0 after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
+            className=" relative after:bg-[#03A84E] hover:text-[#03A84E]  after:absolute after:h-[2px] after:w-0 after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
             href={"/blogs"}
           >
             BLOGS
           </Link>
         </li>
-        
+
         <li>
           <Link
-            className=" relative after:bg-[#03A84E] after:absolute after:h-[2px] after:w-0 after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
-            href={"/contact"}
+            className=" relative after:bg-[#03A84E] hover:text-[#03A84E]  after:absolute after:h-[2px] after:w-0 after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
+            href={"/#EXPERIENCE"}
           >
-            MY DEVELOPER STORY
+            EXPERIENCE
+          </Link>
+        </li>
+        <li>
+          <Link
+            className=" relative hover:text-[#03A84E]  after:bg-[#03A84E] after:absolute after:h-[2px] after:w-0 after:-bottom-1 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
+            href={"/#contact"}
+          >
+            CONTACT
           </Link>
         </li>
         <li>
@@ -84,7 +92,6 @@ const Navbar = () => {
                 src={logo}
                 alt=""
               ></Image>
-              
             </div>
             <div className="lg:hidden">
               <button
@@ -106,7 +113,7 @@ const Navbar = () => {
                 </svg>
               </button>
             </div>
-            <ul className="hidden text-gray-300/80 font-medium text-sm  lg:w-auto lg:space-x-11 lg:items-end lg:flex animate__animated animate__fadeInRight">
+            <ul className="hidden text-gray-300/80 font-medium text-sm  lg:w-auto lg:space-x-10 lg:items-end lg:flex animate__animated animate__fadeInDown">
               {menuLinks}
             </ul>
           </nav>

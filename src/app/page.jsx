@@ -1,4 +1,4 @@
-
+"use client"
 import ParticalesBackground from "@/components/Particalse/ParticalesBackground";
 import Banner from "@/components/Ui/Banner/Banner";
 import Contact from "@/components/Ui/Contact/Contact";
